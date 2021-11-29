@@ -3,4 +3,5 @@ This script contains queries drawn from a Pokemon database containing their name
 
 ## Query Prompts
 The following file contains the assignment file with the details of the queries that we were assigned to write. 
+
 git add <bais3200_homework4.pdf>
