@@ -2,7 +2,7 @@
 I wrote a SQL script that contains queries for a Pokemon database containing their names, statistics and abilities. The data used was sourced from *Bulbapedia*  (https://bulbapedia.bulbagarden.net/wiki/Main_Page) and *Pokemon DB* (https://pokemondb.net/). These queries were written for a homework assignment where I achieved a grade of 106% (including extra credit).
 
 ## Query Prompts
-I was assigned to write the following queries:
+I was assigned to write the following queries which can be found in **SQL_Script**:
 
 **1.** Pokemon represent a diverse set of types. Write a simple query that returns the type and total number of Pokemon belonging to each type. Only include types that have at least 5 Pokemon in the results. Make sure to rename any new, calculated fields.
 
