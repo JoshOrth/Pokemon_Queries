@@ -1,0 +1,65 @@
+--QUESTION 1
+SELECT 
+PokemonType,
+Count(PokemonID) AS PokemonTypeCount
+FROM Type_T
+GROUP BY PokemonType
+Having Count(PokemonID) >= 5
+;
+
+--QUESTION 2
+SELECT 
+MAX(HP) AS MAXHP,
+ROUND(AVG(HP)) AS AVERAGEHP
+FROM Pokemon_T 
+Where Pokemon Like '%saur%'
+;
+
+--QUESTION 3
+SELECT
+Pokemon_T.PokemonID,
+Pokemon_T.Pokemon,
+Round(Pokemon_T.Weight/(POWER((Pokemon_T.Height)*.01,2)),1) AS BMI,
+EvolutionTable.Pokemon AS Evolution
+FROM
+Pokemon_T LEFT OUTER Join Pokemon_T EvolutionTable
+ON Pokemon_T.PokemonID = EvolutionTable.Evolvesfrom
+ORDER BY BMI DESC
+FETCH FIRST 10 ROWS ONLY
+;
+
+--QUESTION 4
+SELECT 
+Pokemon, Speed
+FROM 
+Pokemon_T JOIN Type_T ON Pokemon_T.PokemonID = Type_T.PokemonID
+WHERE Type_T.PokemonType = 'Poison'
+AND Pokemon_T.EvolvesFrom IS NOT NULL
+
+INTERSECT
+
+SELECT
+Pokemon, Speed
+FROM 
+Pokemon_T JOIN Type_T ON Pokemon_T.PokemonID = Type_T.PokemonID
+WHERE Type_T.PokemonType NOT IN 'Poison'
+AND Pokemon_T.EvolvesFrom IS NOT NULL
+;
+
+--QUETION 5
+SELECT
+Pokemon_T.Pokemon, Ability_T.Ability, Ability_T.Description
+FROM Pokemon_T JOIN PokemonAbility_T ON Pokemon_T.PokemonID = PokemonAbility_T.PokemonID 
+JOIN Ability_T ON PokemonAbility_T.AbilityID = Ability_T.AbilityID
+WHERE HiddenAbility = '1' 
+AND Pokemon_T.Defense > (SELECT MEDIAN(Defense) FROM Pokemon_T)
+;
+
+--EXTRA CREDIT
+SELECT Pokemon_T.Pokemon, Pokemon_T.Attack, NEWTABLE.Pokemon AS ANCESTOR,
+SUM((Pokemon_T.Attack)-(NEWTABLE.Attack)) AS AttackDifference
+FROM Pokemon_T JOIN Pokemon_T NEWTABLE
+ON Pokemon_T.Evolvesfrom = NEWTABLE.PokemonID
+GROUP BY Pokemon_T.Pokemon, Pokemon_T.Attack, NEWTABLE.Pokemon, NEWTABLE.Attack
+ORDER BY Attack DESC
+;
