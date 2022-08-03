@@ -1,5 +1,5 @@
 # Pokemon Query Assigment
-I wrote a SQL script that contains queries for a Pokemon database containing their names, statistics and abilities. The data used was sourced from *Bulbapedia*  (https://bulbapedia.bulbagarden.net/wiki/Main_Page) and *Pokemon DB* (https://pokemondb.net/). These queries were written for a homework assignment in my Database Management class at The University of Iowa where I achieved a grade of 106% (including extra credit).
+I wrote a SQL script that contains queries for a Pokemon database containing their names, statistics and abilities. The data used was sourced from *Bulbapedia*  (https://bulbapedia.bulbagarden.net/wiki/Main_Page) and *Pokemon DB* (https://pokemondb.net/). These queries were written for a homework assignment where I achieved a grade of 106% (including extra credit).
 
 ## Query Prompts
 I was assigned to write the following queries:
