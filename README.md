@@ -1,5 +1,5 @@
 # Pokemon Query Assigment
-I wrote a SQL script that contains queries for a Pokemon database containing their names, statistics and abilities. The data used was sourced from *Bulbapedia*  (https://bulbapedia.bulbagarden.net/wiki/Main_Page) and *Pokemon DB* (https://pokemondb.net/). These queries were written for a homework assignment where I achieved a grade of 106% (including extra credit).
+I wrote a SQL script that contains queries for a Pokemon database containing their names, statistics and abilities. The data used was sourced from *Bulbapedia*  (https://bulbapedia.bulbagarden.net/wiki/Main_Page) and *Pokemon DB* (https://pokemondb.net/).
 
 ## Query Prompts
 I was assigned to write the following queries which can be found in **SQL_Script**:
@@ -16,4 +16,4 @@ Write a join query that returns the top 10 Pokemon with the highest BMI. For eac
 
 **5.** Pokemon may possess a “hidden” ability. Write a subquery that returns the name of each Pokemon with a hidden ability, plus the name and description of the ability. Only include Pokemon whose defense rating is greater than the median over all Pokemon.
 
-**6.** (*Extra Credit*) Does evolution yield stronger Pokemon? Write a join query that returns the name and attack rating for each evolved Pokemon, plus the name of their direct ancestor (i.e., the Pokemon they evolved from). In addition, return the difference in attack strength between them (attack rating of Pokemon – attack rating of ancestor). Sort the results so that the Pokemon with the highest attack ratings are listed at the top. Make sure to rename any new, calculated fields.
+**6.** Does evolution yield stronger Pokemon? Write a join query that returns the name and attack rating for each evolved Pokemon, plus the name of their direct ancestor (i.e., the Pokemon they evolved from). In addition, return the difference in attack strength between them (attack rating of Pokemon – attack rating of ancestor). Sort the results so that the Pokemon with the highest attack ratings are listed at the top. Make sure to rename any new, calculated fields.
